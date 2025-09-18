@@ -34,7 +34,7 @@ function loadAuthButton(user) {
       try {// redirect to Google sign-in page
         const { error } = await supabase.auth.signInWithOAuth({
           provider: 'google',
-          options: { redirectTo: window.location.origin + "/RestarauntFinderProject/" }//redirect back to this page after sign-in
+          options: { redirectTo: window.location.origin}//redirect back to this page after sign-in
         })
         if (error) console.error(error)
       } finally {
